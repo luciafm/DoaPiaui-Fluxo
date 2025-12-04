@@ -1,0 +1,199 @@
+:root {
+  --green-primary: #0A7B83;
+  --orange-primary: #EA8B41;
+  --yellow-light: #F2C84B;
+  --beige-bg: #F7F3EB;
+  --beige-section: #FFFDF7;
+  --text-dark: #1F2A2E;
+  --text-light: #4F5B60;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: var(--beige-bg);
+  color: var(--text-dark);
+}
+
+/* ------------------------ */
+/* NAVBAR */
+/* ------------------------ */
+
+.navbar {
+    background: var(--green-primary);
+    padding: 20px 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between; /* empurra itens para lados opostos */
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 32px; /* espaçamento entre os links */
+}
+
+.navbar nav a {
+    color: #fafafa;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* EFEITO HOVER */
+.navbar nav a:hover {
+  color: var(--orange-primary); /* muda para laranja */
+  transform: scale(1.07);       /* leve aumento */
+}
+
+.navbar nav a:hover::after {
+  width: 100%;
+}
+
+/* MAIN */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 3px auto;
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+/* USER CARD */
+.user-card {
+  background: white;
+  padding: 40px 35px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.user-avatar img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+}
+
+.user-info h3 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.user-info p {
+  font-size: 18px;
+  color: var(--text-light);
+}
+
+.user-actions {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  transition: .25s;
+}
+
+.btn.edit {
+  background: var(--yellow-light);
+  color: var(--text-dark);
+}
+
+.btn.password {
+  background: var(--orange-primary);
+  color: white;
+}
+
+.btn.danger {
+  background: #c0392b;
+  color: white;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* DOAÇÕES */
+.user-donations {
+  margin-top: 50px;
+}
+
+.user-donations h3 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.donation-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.donation-item {
+  background: white;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+.donation-item h4 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.status.entregue {
+  background: #2ecc71;
+  color: white;
+}
+
+.status.pendente {
+  background: #f39c12;
+  color: white;
+}
+
+/* RESPONSIVO */
+@media (max-width: 800px) {
+  .user-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .user-actions {
+    width: 100%;
+    margin-left: 0;
+  }
+}

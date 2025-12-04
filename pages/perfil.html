@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minha Conta — DoaPiauí</title>
+
+  <link rel="stylesheet" href="../css/perfil.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="navbar">
+    <div class="container nav-content">
+        <h1 class="logo">DoaPiauí</h1>
+        <nav>
+            <a href="doacoes.html">Doações</a>
+            <a href="#">Meu Perfil</a>
+            <a href="#">Configurações</a>
+            <a href="#" class="logout">Sair</a>
+        </nav>
+    </div>
+</header>
+
+  <main class="container">
+
+    <h2 class="page-title">Minha Conta</h2>
+
+    <!-- CARD DO USUÁRIO -->
+    <section class="user-card">
+
+      <div class="user-avatar">
+        <img src="assents/user-default.svg" alt="Foto de perfil">
+      </div>
+
+      <div class="user-info">
+        <h3 id="userName">Nome do Usuário</h3>
+        <p id="userEmail">email@exemplo.com</p>
+      </div>
+
+      <div class="user-actions">
+        <a href="#" class="btn edit">Editar dados</a>
+        <a href="#" class="btn password">Alterar senha</a>
+        <a href="#" class="btn danger">Excluir conta</a>
+      </div>
+
+    </section>
+
+    <!-- SEÇÃO DAS DOAÇÕES -->
+    <section class="user-donations">
+      <h3>Suas Doações</h3>
+
+      <div class="donation-list">
+
+        <div class="donation-item">
+          <h4>Cesta básica completa</h4>
+          <p>Data: 12/02/2025</p>
+          <span class="status entregue">Entregue</span>
+        </div>
+
+        <div class="donation-item">
+          <h4>Roupas de inverno</h4>
+          <p>Data: 05/01/2025</p>
+          <span class="status pendente">Pendente</span>
+        </div>
+
+        <!-- Depois você pode puxar real-time do Firebase -->
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+
+</html>
