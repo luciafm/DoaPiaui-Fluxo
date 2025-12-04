@@ -14,7 +14,7 @@
             <a href="doacoes.html">Doações</a>
             <a href="perfil.html">Meu Perfil</a>
             <a href="config.html">Configurações</a>
-            <a href="#" class="logout">Sair</a>
+            <a href="../index.html" class="logout">Sair</a>
         </nav>
     </div>
 </header>
@@ -29,48 +29,146 @@
     <section class="doacoes-grid"></section>
 </main>
 <footer>© DoaPiauí - 2025</footer>
-<script type="module">
-import { logout } from "../js/app.js";
-document.querySelector(".logout")?.addEventListener("click", () => logout());
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const grid = document.querySelector(".doacoes-grid");
+            const searchInput = document.getElementById("searchInput");
 
-document.addEventListener("DOMContentLoaded", async () => {
-    const grid = document.querySelector(".doacoes-grid");
-    const searchInput = document.getElementById("searchInput");
+            // 🔥 DOAÇÕES FAKE — APENAS VISUAL
+            const doacoes = [
+                {
+                    id: 1,
+                    titulo: "Roupas de inverno",
+                    categoria: "Roupas",
+                    localizacao: "Teresina, Centro",
+                    descricao: "Casacos, blusas e calças para o frio",
+                    imagem: "https://fieroshop.vtexassets.com/arquivos/ids/181748/casaco-feminino-laranja-de-pluma.jpg?v=638744450595000000"
+                },
+                {
+                    id: 2,
+                    titulo: "Alimentos não perecíveis",
+                    categoria: "Alimentos",
+                    localizacao: "Teresina, Piçarra",
+                    descricao: "Diversos alimentos em bom estado",
+                    imagem: "https://cdn.sistemawbuy.com.br/arquivos/3f8c9e2faf1aeede00141b38f14c9d79/produtos/ROU6REI6/cesta-basica-pequena-1-2-66035f5d01fc0.png"
+                },
+                {
+                    id: 3,
+                    titulo: "Cadeira estofada",
+                    categoria: "Móveis",
+                    localizacao: "Teresina, Mocambinho",
+                    descricao: "Cadeira confortável em ótimo estado",
+                    imagem: "https://m.media-amazon.com/images/I/61vrIzCV73L._AC_UF894,1000_QL80_.jpg"
+                },
+                {
+                    id: 4,
+                    titulo: "Mochilas infantis",
+                    categoria: "Brinquedos",
+                    localizacao: "Teresina, São Cristóvão",
+                    descricao: "Mochilas para crianças de várias idades",
+                    imagem: "https://m.media-amazon.com/images/I/51no5ERfqNL._AC_SY1000_.jpg"
+                },
+                {
+                    id: 5,
+                    titulo: "Kit de higiene pessoal",
+                    categoria: "Cuidados Pessoais",
+                    localizacao: "Teresina, Itararé",
+                    descricao: "Sabonetes, shampoo, escova e pasta de dente para doação.",
+                    imagem: "https://cdn.awsli.com.br/2500x2500/2519/2519112/produto/215282253/design-sem-nome--7--ps7gn98mj2.png"
+                },
+                {
+                    id: 6,
+                    titulo: "Tênis esportivo infantil",
+                    categoria: "Infantil",
+                    localizacao: "Teresina, Parque Piauí",
+                    descricao: "Tênis em ótimo estado, tamanho 32, ideal para escola.",
+                    imagem: "https://www.ortope.com.br/upload/produto/imagem/b_t-nis-infantil-masculino-ortop-flex-run-detalhe-em-tela-preto.webp"
+                },
+                {
+                    id: 7,
+                    titulo: "Cesta de frutas frescas",
+                    categoria: "Alimentos",
+                    localizacao: "Altos, Centro",
+                    descricao: "Cesta com maçãs, bananas, uvas e laranjas selecionadas.",
+                    imagem: "https://flowerland.com.br/wp-content/uploads/2021/04/cesta-de-frutas-nova.jpg"
+                },
+                {
+                    id: 8,
+                    titulo: "Ventilador de mesa",
+                    categoria: "Eletrodomésticos",
+                    localizacao: "Teresina, Morada do Sol",
+                    descricao: "Ventilador de 40cm funcionando perfeitamente.",
+                    imagem: "https://down-br.img.susercontent.com/file/sg-11134201-8225c-mhjam72ohtl0d5"
+                },
+                {
+                    id: 9,
+                    titulo: "Kit escolar completo",
+                    categoria: "Educação",
+                    localizacao: "Teresina, Vermelha",
+                    descricao: "Cadernos, lápis, borracha, cola e mochila infantil.",
+                    imagem: "https://static.wixstatic.com/media/00107d_d315d106afde4d73826c59675d9fc4d7~mv2.jpeg/v1/fill/w_480,h_640,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/00107d_d315d106afde4d73826c59675d9fc4d7~mv2.jpeg"
+                },
+                {
+                    id: 10,
+                    titulo: "Carrinho de bebê",
+                    categoria: "Infantil",
+                    localizacao: "Teresina, Buenos Aires",
+                    descricao: "Carrinho leve e dobrável em ótimo estado.",
+                    imagem: "https://voyageinfantil.com.br/cdn/shop/files/z01bfqcxq37wx2ew807pjm2pa0mk.png?v=1739392467"
+                },
+                {
+                    id: 11,
+                    titulo: "Sofá de dois lugares",
+                    categoria: "Móveis",
+                    localizacao: "Teresina, Horto Florestal",
+                    descricao: "Sofá confortável, tecido limpo e sem rasgos.",
+                    imagem: "https://felixmoveis.com.br/wp-content/uploads/2022/07/1-38.jpg"
+                },
+                {
+                    id: 12,
+                    titulo: "Cesta de produtos de limpeza",
+                    categoria: "Utilidades",
+                    localizacao: "Altos, Bairro São Luís",
+                    descricao: "Detergente, desinfetante, água sanitária e panos de limpeza.",
+                    imagem:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJSLrZHQUQ4i4SOmGYduZV1mP47zCYtvDAUA&s"
+                }
 
-    async function listarDoacoes(nome = "") {
-        try {
-            let url = "http://localhost:3000/doacoes";
-            if (nome) url = `http://localhost:3000/buscar?nome=${encodeURIComponent(nome)}`;
-            const res = await fetch(url);
-            const data = await res.json();
-            grid.innerHTML = "";
-            if (!data.doacoes || data.doacoes.length === 0) {
-                grid.innerHTML = "<p>Nenhuma doação encontrada.</p>";
-                return;
+            ];
+
+            // 🔄 Função para renderizar
+            function renderizar(lista) {
+                grid.innerHTML = "";
+                lista.forEach(d => {
+                    const card = document.createElement("div");
+                    card.classList.add("card");
+
+                    card.innerHTML = `
+                        <img src="${d.imagem}" alt="${d.titulo}">
+                        <div class="card-content">
+                            <h3>${d.titulo}</h3>
+                            <span class="tag">${d.categoria}</span>
+                            <p class="local">${d.localizacao}</p>
+                            <p class="desc">${d.descricao}</p>
+                            <a href="detalhe.html?id=${d.id}" class="details-btn">Ver detalhes</a>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                });
             }
-            data.doacoes.forEach(d => {
-                const card = document.createElement("div");
-                card.classList.add("card");
-                card.innerHTML = `
-                  <img src="${d.imagem || 'https://via.placeholder.com/150'}" alt="${d.titulo}">
-                  <div class="card-content">
-                    <h3>${d.titulo}</h3>
-                    <span class="tag">${d.categoria || "Outros"}</span>
-                    <p class="local">${d.localizacao || "-"}</p>
-                    <p class="desc">${d.descricao || "-"}</p>
-                    <a href="detalhe.html?id=${d.id}" class="details-btn">Ver detalhes</a>
-                  </div>
-                `;
-                grid.appendChild(card);
+
+            // 🔍 Filtro da barra de pesquisa
+            searchInput.addEventListener("input", () => {
+                const termo = searchInput.value.toLowerCase();
+                const filtradas = doacoes.filter(d =>
+                    d.titulo.toLowerCase().includes(termo) ||
+                    d.categoria.toLowerCase().includes(termo)
+                );
+                renderizar(filtradas);
             });
-        } catch (err) {
-            console.error(err);
-            grid.innerHTML = "<p>Erro ao carregar doações.</p>";
-        }
-    }
-    searchInput.addEventListener("input", () => listarDoacoes(searchInput.value));
-    listarDoacoes();
-});
+
+            // Primeiro carregamento
+            renderizar(doacoes);
+        });
 </script>
 </body>
 </html>

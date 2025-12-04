@@ -17,12 +17,12 @@
         <h1 class="logo">DoaPiauí</h1>
         <nav>
             <a href="doacoes.html">Doações</a>
-            <a href="#">Meu Perfil</a>
-            <a href="#">Configurações</a>
-            <a href="#" class="logout">Sair</a>
+            <a href="perfil.html" class="active">Meu Perfil</a>
+            <a href="config.html">Configurações</a>
+            <a href="../index.html" class="logout">Sair</a>
         </nav>
     </div>
-</header>
+  </header>
 
   <main class="container">
 
@@ -32,12 +32,13 @@
     <section class="user-card">
 
       <div class="user-avatar">
-        <img src="assents/user-default.svg" alt="Foto de perfil">
+        <!-- Foto de perfil real (pode trocar depois por foto do usuário) -->
+        <img src="https://i.pravatar.cc/200?img=47" alt="Foto de perfil">
       </div>
 
       <div class="user-info">
-        <h3 id="userName">Nome do Usuário</h3>
-        <p id="userEmail">email@exemplo.com</p>
+        <h3 id="userName">Lúcia Fernandes</h3>
+        <p id="userEmail">lucia@email.com</p>
       </div>
 
       <div class="user-actions">
@@ -66,12 +67,17 @@
           <span class="status pendente">Pendente</span>
         </div>
 
-        <!-- Depois você pode puxar real-time do Firebase -->
+        <!-- No futuro: preencher automaticamente com o Firestore -->
       </div>
 
     </section>
 
   </main>
+
+  <footer>
+    © DoaPiauí - 2025
+</footer>
+
 
 </body>
 

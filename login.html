@@ -25,7 +25,7 @@
             <label>Senha</label>
             <input id="senhaLogin" type="password" required>
             
-            <button class="btn-login" type="submit">Entrar</button>
+            <button id="btnEntrar" class="btn-login" type="button">Entrar</button>
         </form>
         <p class="link-cadastro">
             Não tem uma conta? <a href="criarConta.html">Criar conta</a>
@@ -37,7 +37,10 @@
     </footer>
     
     <!-- Scripts -->
-    <script type="module" src="../js/app.js"></script>
-    <script type="module" src="../js/validacao.js"></script>  
+    <script>
+        document.getElementById("btnEntrar").addEventListener("click", () => {
+        window.location.href ="pages/doacoes.html" ;});
+
+    </script> 
 </body>
 </html>
