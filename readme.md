@@ -1,9 +1,14 @@
 # 🌟 DoaPiauí — Plataforma de Doações do Piauí  
 ### 📝 Projeto acadêmico — Extensão, 2º período de **Análise e Desenvolvimento de Sistemas (ADS)**
 #### 💻 Desenvolvedores
-* Lucia 
-* Sergio 
-* Renato 
+* Lucia Martins 
+* Sergio de Sousa
+* Renato Paiva
+
+---
+
+## 🌐 Acesso ao site
+* O projeto está disponível publicamente via GitHub Pages: https://luciafm.github.io/DoaPiaui-Fluxo/
 
 ---
 
@@ -25,8 +30,5 @@
 | **Github** | Hospedagem |
 
 ---
-
-## 🌐 Acesso ao site
-* O projeto está disponível publicamente via GitHub Pages: https://luciafm.github.io/DoaPiaui-Fluxo/
 
 >“A solidariedade transforma vidas — e a tecnologia também.”
