@@ -1,4 +1,4 @@
-# 🌟 DoaPiauí — Plataforma de Doações do Piauí  
+# 🌟 DoaPiauí — Fluxo de navegação.
 ### 📝 Projeto acadêmico — Extensão, 2º período de **Análise e Desenvolvimento de Sistemas (ADS)**
 #### 💻 Desenvolvedores
 * Lucia Martins 
